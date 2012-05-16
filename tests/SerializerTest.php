@@ -7,8 +7,8 @@ namespace SebastianBergmann\PSON\Tests
         {
             $this->assertEquals(
               '{
-    "class": "SebastianBergmann\\\\PSON\\\\Tests\\\\Foo",
-    "attributes": {
+    "__pson_class": "SebastianBergmann\\\\PSON\\\\Tests\\\\Foo",
+    "__pson_attributes": {
         "bar": "bar"
     }
 }',

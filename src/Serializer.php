@@ -6,8 +6,8 @@ namespace SebastianBergmann\PSON
         public function jsonSerialize()
         {
             return array(
-              'class'      => get_class($this),
-              'attributes' => $this->readAttributes($this)
+              '__pson_class'      => get_class($this),
+              '__pson_attributes' => $this->readAttributes($this)
             );
         }
 
