@@ -7,7 +7,8 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'sebastianbergmann\\pson\\serializer' => '/Serializer.php'
+                'sebastianbergmann\\pson\\serializer' => '/Serializer.php',
+                'sebastianbergmann\\pson\\unserializer' => '/Unserializer.php'
             );
         }
         $cn = strtolower($class);
