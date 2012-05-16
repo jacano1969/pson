@@ -3,6 +3,10 @@ namespace SebastianBergmann\PSON\Tests
 {
     class SerializerTest extends \PHPUnit_Framework_TestCase
     {
+        /**
+         * @covers SebastianBergmann\PSON\Serializer::jsonSerialize
+         * @covers SebastianBergmann\PSON\Serializer::readAttributes
+         */
         public function testObjectCanBeSerialized()
         {
             $this->assertEquals(
