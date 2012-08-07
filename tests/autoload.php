@@ -8,7 +8,8 @@ spl_autoload_register(
         if ($classes === null) {
             $classes = array(
                 'sebastianbergmann\\pson\\tests\\foo' => '/fixture/Foo.php',
-                'sebastianbergmann\\pson\\tests\\serializertest' => '/SerializerTest.php'
+                'sebastianbergmann\\pson\\tests\\serializertest' => '/SerializerTest.php',
+                'sebastianbergmann\\pson\\tests\\unserializertest' => '/UnserializerTest.php'
             );
         }
         $cn = strtolower($class);
