@@ -26,6 +26,24 @@ namespace SebastianBergmann\PSON\Tests
         }
 
         /**
+         * @covers SebastianBergmann\PSON\Unserializer::unserialize
+         */
+        public function testObjectCanBeUnserialized2()
+        {
+            $foo = new \StdClass;
+            $foo->foo = 'bar';
+
+            $pson = array(
+              '__pson_class'      => 'StdClass',
+              '__pson_attributes' => array('foo' => 'bar')
+            );
+
+            $this->assertEquals(
+              $foo, $this->unserializer->unserialize($pson)
+            );
+        }
+
+        /**
          * @covers            SebastianBergmann\PSON\Unserializer::unserialize
          * @expectedException InvalidArgumentException
          * @dataProvider      invalidDataProvider
